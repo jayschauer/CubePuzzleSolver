@@ -1,0 +1,27 @@
+Format -
+parameters: ...
+result: adjacent, collisions, total rotations
+time: seconds
+
+54 adjacent blocks is the maximum - means that is a solution
+(for a 3x3x3 cube, there are 12 adjacent blocks in a layer, and 9 between each later, so 36+18=54)
+
+parameters: n=500, generations=1000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.05, weights = (1, -1, -0.1)
+result: 48.0, 0.0, 13.0
+time: 241 seconds
+
+parameters: n=500, generations=2000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.1, weights = (1, -1, -0.1)
+result: 47.0, 0.0, 14.0
+time: 494 seconds
+
+parameters: n=500, generations=2000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.05, weights = (1, -1, -0.1)
+result: 49.0, 1.0, 12.0
+time: ? seconds (didn't copy here)
+
+parameters: n=500, generations=2000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.05, weights = (1, -2, -0.05)
+result: 48.0, 0.0, 12.0
+time: 260 seconds
+
+parameters: n=500, generations=2000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.1, weights = (1, -2, -0.05)
+result:
+time:
