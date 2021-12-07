@@ -5,6 +5,9 @@ time: seconds
 
 54 adjacent blocks is the maximum - means that is a solution
 (for a 3x3x3 cube, there are 12 adjacent blocks in a layer, and 9 between each later, so 36+18=54)
+I swear I was consistently getting solutions with this when I wrote it back in October 2021,
+but at some point I changed the parameters, and now I can't get it to give a solution.
+Oh well, shows that this isn't a good method for this problem.
 
 parameters: n=500, generations=1000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.05, weights = (1, -1, -0.1)
 result: 48.0, 0.0, 13.0
@@ -23,5 +26,21 @@ result: 48.0, 0.0, 12.0
 time: 260 seconds
 
 parameters: n=500, generations=2000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.1, weights = (1, -2, -0.05)
-result:
-time:
+result: 48.0, 0.0, 14.0
+time: 266 seconds
+
+parameters: n=1000, generations=3000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.1, weights = (1, -2, -0.05)
+result: 49.0, 0.0, 11.0
+time: 783
+
+parameters: n=1000, generations=4000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.1, weights = (1, -2, -0.05)
+result: 47.0, 0.0, 13.0
+time: 1050
+
+parameters: n=1000, generations=5000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.1, weights = (1, -2, -0.05)
+result: 49.0, 0.0, 14.0
+time: 1285
+
+parameters: n=1000, generations=5000, cxpb=0.3, mutpb=0.3, mutate indpb = 0.1, weights = (1, -1, -0.05)
+result: 48.0, 1.0, 16.0
+time: 1280

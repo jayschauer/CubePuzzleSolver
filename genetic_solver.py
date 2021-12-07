@@ -89,7 +89,7 @@ def main():
 
     if fitness == 'adjacent':
         # weights needed to maximize adjacent squares, minimize collisions, minimize total rotations
-        creator.create("FitnessMulti", base.Fitness, weights=(1.0, -2.0, -0.05))
+        creator.create("FitnessMulti", base.Fitness, weights=(1.0, -1.0, -0.05))
 
     if fitness == 'volume':
         # weights needed to minimize volume, minimize collisions, minimize total rotations
@@ -117,8 +117,8 @@ def main():
 
     start = time.time()
     fame = HallOfFame(maxsize=10)
-    pop, logbook = algorithms.eaSimple(population=toolbox.population(n=500), toolbox=toolbox, cxpb=0.3, mutpb=0.3,
-                                       ngen=2000, halloffame=fame)
+    pop, logbook = algorithms.eaSimple(population=toolbox.population(n=1000), toolbox=toolbox, cxpb=0.3, mutpb=0.3,
+                                       ngen=5000, halloffame=fame)
     end = time.time()
 
     best_rotations = fame[0]
